@@ -9,6 +9,7 @@ nav {
   background-color: #10898d;
   padding: 5px;
 }
+
 .left_part > h2 {
   border: 2px solid black;
   padding: 5px !important;
@@ -65,4 +66,42 @@ nav {
   display: block;
   clear: both;
   float: right;
+}
+@media screen and (max-width: 990px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .middle_part {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+  .middle_part input {
+    width: 300px;
+  }
+}
+.box {
+  display: none;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 20px solid grey;
+  border-radius: 50%;
+  margin: auto;
+  border-top: 20px solid red;
+  border-bottom: 20px solid red;
+  animation: loader 2s linear Infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
